@@ -17,3 +17,4 @@ In both the cases, lambda is the regularization hyper-parameter that is used and
 In case of Neural Network, similarly penality is added at the square of w at the hidden layer level. That is called Frobenius regularization. Now that regularization is added, it needs to considered while calculating the back propogation. Because of the addition of Frobenius regularization (similar to l2 regularization), the value of w is decreased relatively smaller in each back prop step. That is why this regularization is also called as "weight decay"  
 
 
+## Why does Regularization solves overfitting or solves high variance problem ##
