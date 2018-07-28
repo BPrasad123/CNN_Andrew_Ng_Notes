@@ -18,4 +18,4 @@ In case of Neural Network, similarly penality is added at the square of w at the
 
 
 ## Why does Regularization solves overfitting or solves high variance problem ##
-ML_DL_Intuitions/Bias and Variance.png
+![Screenshot](Bias and Variance.png)
