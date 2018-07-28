@@ -18,5 +18,8 @@ In case of Neural Network, similarly penality is added at the square of w at the
 
 
 ## Why does Regularization solves overfitting or solves high variance problem ##
-Higher value of regularization parameter (lambda) makes the value of w tend to zero. Hence lessens the effect of some of the hidden nodes and thus makes the function more linear and reduces the variance. Below picture illustrates the purpose here.  
+Higher value of regularization parameter (lambda) makes the value of w tend to zero. Hence lessens the effect of some of the hidden nodes and thus makes the function more linear and reduces the variance. Below picture (taken from Prof. Andrew Ng's DL course) illustrates the purpose here.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Bias%20and%20Variance.png)
+
+When higher value of lamda reduces the value of w, that in turn reduces the value of z as well. Smaller size of z make the curve roughly linear that corresponds to one hidden layer. In same way, other hidden layers also get roughly linear and that reduces the variance and overfitting. Picture below taken from Prof. Andrew Ng's DL course for illustration.
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Regularization.png)
