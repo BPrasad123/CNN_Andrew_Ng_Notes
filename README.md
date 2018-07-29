@@ -33,3 +33,4 @@ Remember that drop out should not be implemented when running NN on test data as
 ## Why dropout works ##
 In NN, implementation of dropout makes the weights shrink just in a similar way as l2 regularization. This addresses the variance issue.
 keep-prob parameter value can be assigned differently for different layer depending upon the number and size of the layer. With drop out there is no well defined J function anymore hence for all other checks related to grandient discent, it is advised to check the NN model without dropout first and once everything is ok implement dropout for regularization. Most importantly regularization should be implemented only overfitting issue occurs.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Why%20dropout%20works.png)
