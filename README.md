@@ -17,9 +17,16 @@ In both the cases, lambda is the regularization hyper-parameter that is used and
 In case of Neural Network, similarly penality is added at the square of w at the hidden layer level. That is called Frobenius regularization. Now that regularization is added, it needs to considered while calculating the back propogation. Because of the addition of Frobenius regularization (similar to l2 regularization), the value of w is decreased relatively smaller in each back prop step. That is why this regularization is also called as "weight decay"  
 
 
-## Why does Regularization solves overfitting or solves high variance problem ##
+## Why does Regularization solve overfitting or high variance problem? ##
 Higher value of regularization parameter (lambda) makes the value of w tend to zero. Hence lessens the effect of some of the hidden nodes and thus makes the function more linear and reduces the variance. Below picture (taken from Prof. Andrew Ng's DL course) illustrates the purpose here.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Bias%20and%20Variance.png)
 
 When higher value of lamda reduces the value of w, that in turn reduces the value of z as well. Smaller size of z make the curve roughly linear that corresponds to one hidden layer. In same way, other hidden layers also get roughly linear and that reduces the variance and overfitting. A point to be noted that the revised cost function with the inclusion of regularization should be considered all the time. Otherwise it will not serve the purpose. Picture below taken from Prof. Andrew Ng's DL course for illustration.
-![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Regularization.png)
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Regularization.png)  
+
+## Dropout Regularization ##
+In NN, randomly drop some nodes or make them inactive for each training example. This results in smaller and diminished network to reduce the noise. For implementation there are three apporaches however the most common one is "Inverted Dropout".  
+"Keep-prob" is a hyper-parameter that denotes the percentage of active nodes in a given layer. If it is 0.8 then 80% of nodes will be active and remaining 20% will be shut off randomly for each training example or iteration of gradient discent. In the illustraion below d3 is the bullian array to implement node shut off randomly. With this drop out the value of 'a' is also reduced and than in turn reduces the value of 'z' as well and that is not correct. Hence at each iteration value of 'a' is further devided by 0.8 (the value of keep-prob) as if all the nodes actively contributed.  
+Remember that drop out should not be implemented when running NN on test data as we do not want our output to be random.  
+
+
