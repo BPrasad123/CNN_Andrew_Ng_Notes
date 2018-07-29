@@ -61,3 +61,7 @@ Idea is to randomly assign values to 'w' not so bigger than 1 nor so lesser than
 
 ### Numerical Approximation ###
 Considering two sided difference, the appoximate initialization value of 'w' is much more accurate. Picture below illustrates on the same.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Numerical%20Approximation.png)
+
+### Gradient Checking ###
+Gradient checking is one common use case of two sided numerical approximation. Step is to reshape all the parametrs w and b in a vector format say theta. Additing epsilon to left and right of 'w' calculate the theta is changing in form of derivative. Normally 10 to the power '-7' is used as value of epsilon. If the derivative of theta is in the range of the value of epsilon then gradient is all ok otherwise need to debug.  
