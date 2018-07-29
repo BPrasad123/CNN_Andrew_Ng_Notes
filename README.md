@@ -57,3 +57,4 @@ Since 'w' is exponentially interpreted for the output calculation, in case of ve
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Gradient%20explodes_vanishes.png)
 ### Random weight initialization ###
 Idea is to randomly assign values to 'w' not so bigger than 1 nor so lesser than 1. For the same it has been observed to assign 1/n (number of input features) as the variance of 'w'. However in case we are using Relu as activation function then 2/n should be assigned. The image below illustrates on the same. This although does not fix the problem fully however it avoids grandient to vanish or explode.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Gradient%20explodes_vanishes%20initialization.png)
