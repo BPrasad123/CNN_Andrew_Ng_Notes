@@ -34,3 +34,12 @@ Remember that drop out should not be implemented when running NN on test data as
 In NN, implementation of dropout makes the weights shrink just in a similar way as l2 regularization. This addresses the variance issue.
 keep-prob parameter value can be assigned differently for different layer depending upon the number and size of the layer. With drop out there is no well defined J function anymore hence for all other checks related to grandient discent, it is advised to check the NN model without dropout first and once everything is ok implement dropout for regularization. Most importantly regularization should be implemented only overfitting issue occurs.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Why%20dropout%20works.png)
+
+## Other methods of Regularization ##
+### Image Augmentation ###
+At times getting more training data is expensive. Hence in case of image processing, Image augmentation is another solution!!  
+
+### Early Stopping ###
+As we are aware 'w' is randomly assigned with a very small number close to zero. As the model is trained more and more the value of 'w' also increases. Now, when we compare the loss function on training dataset against that on the Dev set (CV), we see that the loss function in both the cases continue to converge along however at a certain point the loss function on the Dev set starts diversing. We can stop the model there itself. At that point the value of 'w' is mid sized and the trained model did not pick up much noise. However it has a downside :  
+Ideally optimization of cost function and regularization for overfitting issue should not be addressed simultaneously. However with early stopping it tries to do both the things which may not be an accepted case in many cases.
+
