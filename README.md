@@ -28,5 +28,5 @@ When higher value of lamda reduces the value of w, that in turn reduces the valu
 In NN, randomly drop some nodes or make them inactive for each training example. This results in smaller and diminished network to reduce the noise. For implementation there are three apporaches however the most common one is "Inverted Dropout".  
 "Keep-prob" is a hyper-parameter that denotes the percentage of active nodes in a given layer. If it is 0.8 then 80% of nodes will be active and remaining 20% will be shut off randomly for each training example or iteration of gradient discent. In the illustraion below d3 is the bullian array to implement node shut off randomly. With this drop out the value of 'a' is also reduced and than in turn reduces the value of 'z' as well and that is not correct. Hence at each iteration value of 'a' is further devided by 0.8 (the value of keep-prob) as if all the nodes actively contributed.  
 Remember that drop out should not be implemented when running NN on test data as we do not want our output to be random.  
-
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Dropout%20Intuition.png)
 
