@@ -43,3 +43,16 @@ At times getting more training data is expensive. Hence in case of image process
 As we are aware 'w' is randomly assigned with a very small number close to zero. As the model is trained more and more the value of 'w' also increases. Now, when we compare the loss function on training dataset against that on the Dev set (CV), we see that the loss function in both the cases continue to converge along however at a certain point the loss function on the Dev set starts diversing. We can stop the model there itself. At that point the value of 'w' is mid sized and the trained model did not pick up much noise. However it has a downside :  
 Ideally optimization of cost function and regularization for overfitting issue should not be addressed simultaneously. However with early stopping it tries to do both the things which may not be an accepted case in many cases.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Early%20Stopping.png)
+
+
+# Optimization Problems and SOlutions #
+
+
+## Input Data Normalization ##
+Speed of gradient descent also depends upon the distribution of the input data. Normalizing input data makes gradient descent faster. One thing to remember is that the same normalization standards need to be applied to both training and test datasets. With normalized input data, the cost function becomes much easier to optimize.  
+
+## Vanishing/Exploding Gradient Descent ##
+Since 'w' is exponentially interpreted for the output calculation, in case of very deep neural network the output value can become very large if the value of 'w' is greater than one and very tiny if 'w' is less than one. Hence accordingly the gradient descent explodes or vanishes.  
+
+Random weight initialization
+![alt text](
