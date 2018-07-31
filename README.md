@@ -66,4 +66,16 @@ Considering two sided difference, the appoximate initialization value of 'w' is 
 ### Gradient Checking ###
 Gradient checking is one common use case of two sided numerical approximation. Step is to reshape all the parametrs w and b in a vector format say theta. Additing epsilon to left and right of 'w' calculate the theta is changing in form of derivative. Normally 10 to the power '-7' is used as value of epsilon. If the derivative of theta is in the range of the value of epsilon then gradient is all ok otherwise need to debug.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Grad%20Check.png)
-![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Grad%20Check%20Implementation.png)
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Grad%20Check%20Implementation.png)  
+
+
+# Optimization Methods #
+There are various methods for optimization for Gradient Descent such as Stochastic Gradient Descent, Adam, RMSProp etc. The context here is to breif on all those alogorithms.  
+## Mini Batch Gradient Descent ##
+When the training dataset is huge, it takes substantial amount of time for the gradient descent to optimize. Hence the training set is devided into some batches and let the gradient descent optimize on each batch at a time in stead of the whole dataset.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Mini%20Batch%20GD.png)  
+
+The cost function is averaged over all the mini batches. Moreover if the regularization is considered then it has to be incorporated while calculating cost function value. Since gadient descent step happens on every batch, hence one epoch sees GD steps equal to number of batches. The entire process needs to be iterated till the grandient converges to its optimum value.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Mini%20Batch%20GD2.png)
+
+https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Mini%20Batch%20GD2.png
