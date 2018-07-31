@@ -76,6 +76,10 @@ When the training dataset is huge, it takes substantial amount of time for the g
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Mini%20Batch%20GD.png)  
 
 The cost function is averaged over all the mini batches. Moreover if the regularization is considered then it has to be incorporated while calculating cost function value. Since gadient descent step happens on every batch, hence one epoch sees GD steps equal to number of batches. The entire process needs to be iterated till the grandient converges to its optimum value.  
-![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Mini%20Batch%20GD2.png)
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Mini%20Batch%20GD2.png)  
 
-https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Mini%20Batch%20GD2.png
+
+When mini batch size = m, it is same as batch GD. In this case, the GD is slow to converse although it is prone to less noise and GD steps are large. And it is more likely to reach the global minumum at the end.  
+When mini batch size = 1, it is called Stochastic GD. In this case, for every training input GD step takes place. It is very noisy and does not converge to the global minimum.  
+When mini batch size is greater than 1 and less than m, GD converges fast. If learning rate is kept constant throughout convergence steps then GD does not converge to the global minimum however it wanders around very near to that. Weight decay method tries to reduce the size of the step with each iteration to adress this issue.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Choosing%20mini-batch%20size1.png)
