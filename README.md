@@ -82,4 +82,9 @@ The cost function is averaged over all the mini batches. Moreover if the regular
 When mini batch size = m, it is same as batch GD. In this case, the GD is slow to converse although it is prone to less noise and GD steps are large. And it is more likely to reach the global minumum at the end.  
 When mini batch size = 1, it is called Stochastic GD. In this case, for every training input GD step takes place. It is very noisy and does not converge to the global minimum.  
 When mini batch size is greater than 1 and less than m, GD converges fast. If learning rate is kept constant throughout convergence steps then GD does not converge to the global minimum however it wanders around very near to that. Weight decay method tries to reduce the size of the step with each iteration to adress this issue.  
-![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Choosing%20mini-batch%20size1.png)
+Chossing the size of the batch: If the dataset size is small (approx < 2000) then no need. Typical batch size is power of 2. Hence size can be choosen among 64, 128, 256, 512...Most important part is to ensure that the size of the mini match should fit in the CPU/GPU memory.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Choosing%20mini-batch%20size1.png)  
+
+## Exponentially Weighted Averages ## (One of the other optimization algos better than Gradient Descent)
+Considering the temperature example as illustrated in the below image, it tries to decide today's temperature based on weighted averages of temperature from last days and today's observed temperature.  
+![alt text]()
