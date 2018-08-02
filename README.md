@@ -87,4 +87,16 @@ Chossing the size of the batch: If the dataset size is small (approx < 2000) the
 
 ## Exponentially Weighted Averages ## (One of the other optimization algos better than Gradient Descent)
 Considering the temperature example as illustrated in the below image, it tries to decide today's temperature based on weighted averages of temperature from last days and today's observed temperature.  
-![alt text]()
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Exponentially%20Weighted%20Average.png)  
+
+Depending upon the value of Beta, the number of past days for average calculation is decided.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Exponentially%20Weighted%20Average%202.png)
+
+It has been observed that in the initial time the curve is close to zero. That is due to the bias and lack of many past observations to make an average of. Hence the formula of Vt is changed to take care of bias at the initial period. The picture below illustrates on the same.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Exponentially%20Weighted%20Average%20Bias%20Correction.png)  
+
+## Gradient Descent with Momentum ## (Another optimization algo that works better than normal Gradient Descent)
+In case of gradient descent there are two key considerations to make the GD faster i.e. appropriate learning rate (so that GD does not diverge) and a mechanism that minimizes the vertical learning and increases the horizental learning.  
+The concept of "Exponentially Weighted Averages" can be implemented here with updates of 'w' and 'b' for each GD step.  
+Pictorially if we observe, the vertical learning steps average out to a value near to zero. Hence the vertical steps get reduced significantly. At the same time since horizental steps are in same direction, the step size stays significant.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Gradient%20Descent%20Momentum.png)
