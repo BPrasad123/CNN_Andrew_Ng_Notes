@@ -137,5 +137,21 @@ In earlier days people used to take a range of values and check systematically e
 ## Batch Normalization ##
 Normalizing the batch helps in faster optimization. Batch norm not only normalizes the inputs 'X' but also the 'Z' deep inside the network.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Batch%20Norm.png)  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Batch%20Norm%20Formulas.png)
 
+The parameter Beta here is with respect to Batch Norm and that is different from the beta in momentum, rmsprop and adam.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Adding%20Batch%20Norm%20to%20Z.png)
 
+During the mini batch norm, the bias constant that is 'b' cancels out hence batch norm is applied only 'w' parameter as shown below.
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Batch%20Norm%20with%20Mini%20Batches.png)
+
+Implementing GD with mini batch norm:  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Batch%20Norm%20Implementation.png)
+
+### Why Batch Norm works ###
+If the distribution of input changed then we need to retrain the model which is not an effective way. Hence normalizing the input and running the model gets the input distribution standardized. This process is called "covariate shift".  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Covariate%20Shift.png)
+
+### Batch Norm at Test Time ###
+Batch norm is run on the entire set of mini batch howevere in case of testing it is different and it has to be done at each test entry level. For this values of beta and gamma are calculated from the weighted averages of training dataset and used in testing.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Batch%20Norm%20During%20Test.png)
