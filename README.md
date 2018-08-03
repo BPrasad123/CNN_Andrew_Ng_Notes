@@ -99,4 +99,16 @@ It has been observed that in the initial time the curve is close to zero. That i
 In case of gradient descent there are two key considerations to make the GD faster i.e. appropriate learning rate (so that GD does not diverge) and a mechanism that minimizes the vertical learning and increases the horizental learning.  
 The concept of "Exponentially Weighted Averages" can be implemented here with updates of 'w' and 'b' for each GD step.  
 Pictorially if we observe, the vertical learning steps average out to a value near to zero. Hence the vertical steps get reduced significantly. At the same time since horizental steps are in same direction, the step size stays significant.  
-![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Gradient%20Descent%20Momentum.png)
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Gradient%20Descent%20Momentum.png)  
+
+## RMSprop ##
+It is modified algo of "Exponentially Weighted Averages" to make the learning step faster iun horizental direction and slower in vertical direction. It squares the derivative part while making the learning step. Since the value of horizental step is small and that of vertical step is large, hence the following formula works better. Moreover in this algorithm we can choose larger learning rate without any fear of ending up with divergence. It works with wide range of deep learning architectures.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/RMSprop.png)  
+
+
+## ADAM ## 
+Combined version of "Gradient Descent with Momentum" and "RMSprop" to create even better model.  
+It works with wide range of deep learning architectures.  
+
+Hyperparameters of Adam to optimize:  
+In most of the cases, people do not prefer to optimize beta of momentum or beta of RMSprop or epsilon. Ony thing to optimize is the learing rate.  
