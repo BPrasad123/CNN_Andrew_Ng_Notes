@@ -134,3 +134,8 @@ In Deep Learning there are several hyperparameters (mentioned below) that need t
 In earlier days people used to take a range of values and check systematically each combination in the grid. This is computationally expensive and since in DL number of hyperparameters are more hence this is not an effective way of tuning. Hence ideal case is to choose the combination of values form the ranges randomly using "Coarse to fine" search. It is necessary to take uniformly random values.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Coarse%20to%20fine%20Search.png)
 
+## Batch Normalization ##
+Normalizing the batch helps in faster optimization. Batch norm not only normalizes the inputs 'X' but also the 'Z' deep inside the network.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Batch%20Norm.png)  
+
+
