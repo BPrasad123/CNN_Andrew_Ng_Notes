@@ -124,3 +124,10 @@ There are other techniques for learning rate decay as well. Here are some exampl
 ## The Problem of Local Optima ##
 Initially people were worried about local optima when the learning rate became zero. However with further reseach it was found that in most of the cases the GD step is zero in saddle points. In such cases, Momentum, RMSprop and Adam are effective to get off such plataus points.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Local%20Optima.png)
+
+# Hyperparameter Tuning #
+In Deep Learning there are several hyperparameters (mentioned below) that need to be tuned for better performance. However not all the parameters of equal importance for tuning. Hence higher to lower priority order goes like.. Red -> Yellow -> Purpule -> None (Not required). Again this is not a hard and first rule. This is based on the best practices done by industries.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Hyperparameters%20Tuning.png)  
+
+
+
