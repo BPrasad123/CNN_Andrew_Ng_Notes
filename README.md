@@ -126,8 +126,10 @@ Initially people were worried about local optima when the learning rate became z
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Local%20Optima.png)
 
 # Hyperparameter Tuning #
-In Deep Learning there are several hyperparameters (mentioned below) that need to be tuned for better performance. However not all the parameters of equal importance for tuning. Hence higher to lower priority order goes like.. Red -> Yellow -> Purpule -> None (Not required). Again this is not a hard and first rule. This is based on the best practices done by industries.  
+## What hyperparameters to tune ##
+In Deep Learning there are several hyperparameters (mentioned below) that need to be tuned for better performance. However not all the parameters of equal importance for tuning. Hence higher to lower priority order goes like.. Red -> Yellow -> Purple -> None (Not required). Again this is not a hard and first rule. This is based on the best practices done by industries.  
 ![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Hyperparameters%20Tuning.png)  
 
-
-
+## How to choose the range of hyperparameter values for tuning ##
+In earlier days people used to take a range of values and check systematically each combination in the grid. This is computationally expensive and since in DL number of hyperparameters are more hence this is not an effective way of tuning. Hence ideal case is to choose the combination of values form the ranges randomly using "Coarse to fine" search.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Coarse%20to%20fine%20Search.png)
