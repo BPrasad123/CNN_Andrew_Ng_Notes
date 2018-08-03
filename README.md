@@ -109,6 +109,14 @@ It is modified algo of "Exponentially Weighted Averages" to make the learning st
 ## ADAM ## 
 Combined version of "Gradient Descent with Momentum" and "RMSprop" to create even better model.  
 It works with wide range of deep learning architectures.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Adam.png)
 
 Hyperparameters of Adam to optimize:  
 In most of the cases, people do not prefer to optimize beta of momentum or beta of RMSprop or epsilon. Ony thing to optimize is the learing rate.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Adam%20Hyperparameters.png)  
+
+## Learning Rate Decay ##
+As in case of mini batch the GD does not converge exactly onto the global minimum however that wanders around that; reducing learning rate with each epoch is a good idea to stay close to the global minimum. For this purpose, the learning rate has to be reduced with each epoch. Following is the most widely used technique for learning rate decay.  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Learning%20Rate%20Decay.png)
+There are other techniques for learning rate decay as well. Here are some examples:  
+![alt text](https://github.com/BPrasad123/ML_DL_Intuitions/blob/master/Learning%20Rate%20Decay%20Other%20Methods.png)
