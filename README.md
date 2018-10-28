@@ -1,3 +1,5 @@
+# Completely Opinionated with respect to my comments and notes #
+
 # Goal #
 
 There are numerous reads for ML and DL fundamental aspects. The goal here is to touch upon all the elementary and important ones with simple and short explanation in plain english so that it will help us to remember all that by taking a quick look at this page.  
